@@ -1,0 +1,36 @@
+/* universal styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* prevents borders and paddings adding to height and width of the box model of elements */
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 25px;
+
+}
+
+header {
+  height: 95vh;
+  /* always 95% the viweport */
+  background-image: linear-gradient(
+      to bottom,
+      rgba(206, 145, 21, 0.792),
+      rgba(82, 231, 107, 0.536)
+    ),
+    url(images/sigiriya.jpg);
+  background-size: cover;
+  /* fits the image inside of element no matter what */
+  background-position: top;
+  /* no matter what the viweport size istop wont crop (top styas the same u can also change it to bottom or center) */
+  /* background-image: ;=> no need to cretae a new bg-image property u can comma it and intro a new always  but remember the order  */
+  border-radius: 10px;
+  /* clip-path: polygon(0 0, 100% 0%, 98% 100%, 0% 100%); */
+  /* used clippy a image clip generator */
+}
