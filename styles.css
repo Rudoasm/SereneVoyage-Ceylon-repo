@@ -13,18 +13,21 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 25px;
-
 }
 
 header {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
   height: 95vh;
   /* always 95% the viweport */
   background-image: linear-gradient(
       to bottom,
-      rgba(206, 145, 21, 0.792),
-      rgba(82, 231, 107, 0.536)
+      rgba(21, 206, 141, 0.848),
+      rgba(16, 162, 210, 0.536)
     ),
-    url(images/sigiriya.jpg);
+    url(images/ninearch.jpg);
   background-size: cover;
   /* fits the image inside of element no matter what */
   background-position: top;
@@ -33,4 +36,87 @@ header {
   border-radius: 10px;
   /* clip-path: polygon(0 0, 100% 0%, 98% 100%, 0% 100%); */
   /* used clippy a image clip generator */
+  position: relative;
+  /* the absolute changes according to this => origin */
+}
+.logo-box {
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  /* replaceble with flex box */
+}
+.logo {
+  height: 200px;
+  /* width automatcially will be figured out */
+}
+
+.heading-1 {
+  color: aliceblue;
+  /* u cud have used instead */
+  position: absolute;
+  top: 40%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  /* now it is related to itsle f to correctly centered
+   = > instead of flexbox  */
+}
+.main-head {
+  text-transform: uppercase;
+  font-size: 60px;
+  font-weight: 500;
+  display: block;
+  letter-spacing: 35px;
+  /* line-height: 25px; */
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  /* tailored timing function */
+  /* to trigger animation these are the only two things needed */
+  /* animation-delay:3s => wait for 3s then animates */
+  /* animation-iteration-count: 2;=> times animation happens */
+}
+.secondary-head {
+  display: block;
+  font-style: italic;
+  font-family: "Dancing Script", cursive;
+  margin-top: -10px;
+  letter-spacing: 6.5px;
+  /* animation-name: moveInRight;
+  animation-timing-function: ease-in;
+  animation-duration: 1s; */
+  /* or use animation */
+  animation: moveInRight 1s ease-in;
+}
+
+/* Annimations */
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-100px);
+    /* transform: rotate(20deg); */
+  }
+  80% {
+    transform: translate(10px);
+    /* we use this to cretae a bounce effect go ryt and come back to center. opacity would not fit here */
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translate(100px);
+  }
+  80% {
+    transform: translate(-10px);
+    /* we use this to cretae a bounce effect go ryt and come back to center. opacity would not fit here */
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
