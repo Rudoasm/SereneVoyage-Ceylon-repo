@@ -10,7 +10,7 @@ html {
   /* font-size: 10px; => bad practise if user changes font-size from browswe nothing changes so give a percentage that gets 10 percent if user dosent change anything ()if font-size is 16px */
   font-size: 62.5%;
   /* default is 16px but when using rem that depends on root font size it makes claculation harder.
-  1rem => 10px now not 16px. we use this to make more dynamic.reducing font size makes it all smaller handy when using media querries  */
+    1rem => 10px now not 16px. we use this to make more dynamic.reducing font size makes it all smaller handy when using media querries  */
 }
 
 body {
@@ -26,9 +26,9 @@ body {
 
 header {
   /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
   height: 95vh;
   /* always 95% the viweport */
   background-image: linear-gradient(to bottom, rgba(21, 206, 141, 0.848), rgba(16, 162, 210, 0.536)), url(../images/ninearch.jpg);
@@ -43,15 +43,13 @@ header {
   position: relative;
   /* the absolute changes according to this => origin */
 }
-
-.header__logo-box {
+header .header__logo-box {
   position: absolute;
   top: 1rem;
   left: 4rem;
   /* replaceble with flex box */
 }
-
-.header__logo {
+header .header__logo {
   height: 20rem;
   /* width automatcially will be figured out */
 }
@@ -66,10 +64,9 @@ header {
   text-align: center;
   transform: translate(-50%, -50%);
   /* now it is related to itsle f to correctly centered
-   = > instead of flexbox  */
+     = > instead of flexbox  */
 }
-
-.heading-1--main-head {
+.heading-1 .heading-1--main-head {
   text-transform: uppercase;
   font-size: 6rem;
   font-weight: 500;
@@ -85,8 +82,7 @@ header {
   /* animation-delay:3s => wait for 3s then animates */
   /* animation-iteration-count: 2;=> times animation happens */
 }
-
-.heading-1--secondary-head {
+.heading-1 .heading-1--secondary-head {
   display: block;
   font-style: italic;
   font-family: "Dancing Script", cursive;
@@ -94,8 +90,8 @@ header {
   letter-spacing: 0.7rem;
   padding: 10px;
   /* animation-name: moveInRight;
-  animation-timing-function: ease-in;
-  animation-duration: 1s; */
+      animation-timing-function: ease-in;
+      animation-duration: 1s; */
   /* or use animation */
   animation: moveInRight 1s ease-in;
   color: rgb(243, 242, 242);
@@ -151,14 +147,16 @@ header {
   border-radius: 10px;
   margin-bottom: 10px;
 }
-
-.btn:hover {
+.btn:hover,
+.btn:link:hover,
+.btn:visited:hover {
   transform: translateY(-3px);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
   /* first in x then y and  and opacity */
 }
-
-.btn:active {
+.btn:active,
+.btn:link:active,
+.btn:visited:active {
   transform: translateY(-1px);
   /* The properties below are relative to the initial .btn state, not the hover state */
   background-color: #fff;
