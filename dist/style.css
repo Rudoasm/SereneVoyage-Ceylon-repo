@@ -1,16 +1,11 @@
-// mixxins to cretae functions, u can pass properties as functions
-// include to call functions
-// imagine u have nav and two sub parts . float them left and right so u will lose the bg of keft element. u have to set up a  pesudo class after to main class and give content:",clear:both,display:table
 /* universal styles */
-
-$secondary-color: #fff;
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   /* prevents borders and paddings adding to height and width of the box model of elements */
 }
+
 html {
   /* font-size: 10px; => bad practise if user changes font-size from browswe nothing changes so give a percentage that gets 10 percent if user dosent change anything ()if font-size is 16px */
   font-size: 62.5%;
@@ -29,19 +24,14 @@ body {
   padding: 2.5rem;
 }
 
-header {
+.header {
   /* display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; */
   height: 95vh;
   /* always 95% the viweport */
-  background-image: linear-gradient(
-      to bottom,
-      rgba(21, 206, 141, 0.848),
-      rgba(16, 162, 210, 0.536)
-    ),
-    url(../images/ninearch.jpg);
+  background-image: linear-gradient(to bottom, rgba(21, 206, 141, 0.848), rgba(16, 162, 210, 0.536)), url(../images/ninearch.jpg);
   background-size: cover;
   /* fits the image inside of element no matter what */
   background-position: top;
@@ -52,20 +42,18 @@ header {
   /* used clippy a image clip generator */
   position: relative;
   /* the absolute changes according to this => origin */
-
-  .header__logo-box {
-    position: absolute;
-    top: 1rem;
-    left: 4rem;
-    /* replaceble with flex box */
-  }
-  .header__logo {
-    height: 20rem;
-    /* width automatcially will be figured out */
-  }
 }
-
-.heading-1 {
+.header__logo-box {
+  position: absolute;
+  top: 1rem;
+  left: 4rem;
+  /* replaceble with flex box */
+}
+.header__logo {
+  height: 20rem;
+  /* width automatcially will be figured out */
+}
+.header .heading-1 {
   color: aliceblue;
   /* u cud have used instead */
   position: absolute;
@@ -76,36 +64,36 @@ header {
   transform: translate(-50%, -50%);
   /* now it is related to itsle f to correctly centered
      = > instead of flexbox  */
-  .heading-1--main-head {
-    text-transform: uppercase;
-    font-size: 6rem;
-    font-weight: 500;
-    display: block;
-    letter-spacing: 3.5rem;
-    padding: 10px;
-    /* line-height: 25px; */
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-    /* tailored timing function */
-    /* to trigger animation these are the only two things needed */
-    /* animation-delay:3s => wait for 3s then animates */
-    /* animation-iteration-count: 2;=> times animation happens */
-  }
-  .heading-1--secondary-head {
-    display: block;
-    font-style: italic;
-    font-family: "Dancing Script", cursive;
-    margin-top: -1rem;
-    letter-spacing: 0.7rem;
-    padding: 10px;
-    /* animation-name: moveInRight;
-        animation-timing-function: ease-in;
-        animation-duration: 1s; */
-    /* or use animation */
-    animation: moveInRight 1s ease-in;
-    color: rgb(243, 242, 242);
-  }
+}
+.header .heading-1--main-head {
+  text-transform: uppercase;
+  font-size: 6rem;
+  font-weight: 500;
+  display: block;
+  letter-spacing: 3.5rem;
+  padding: 10px;
+  /* line-height: 25px; */
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  /* tailored timing function */
+  /* to trigger animation these are the only two things needed */
+  /* animation-delay:3s => wait for 3s then animates */
+  /* animation-iteration-count: 2;=> times animation happens */
+}
+.header .heading-1--secondary-head {
+  display: block;
+  font-style: italic;
+  font-family: "Dancing Script", cursive;
+  margin-top: -1rem;
+  letter-spacing: 0.7rem;
+  padding: 10px;
+  /* animation-name: moveInRight;
+      animation-timing-function: ease-in;
+      animation-duration: 1s; */
+  /* or use animation */
+  animation: moveInRight 1s ease-in;
+  color: rgb(243, 242, 242);
 }
 
 /* Annimations */
@@ -124,7 +112,6 @@ header {
     transform: translate(0);
   }
 }
-
 @keyframes moveInRight {
   0% {
     opacity: 0;
@@ -143,15 +130,11 @@ header {
   0% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
   }
 }
-
-.btn,
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   padding: 10px 30px;
   text-transform: uppercase;
   text-decoration: none;
@@ -160,24 +143,23 @@ header {
   transition: all 0.2s;
   border-radius: 10px;
   margin-bottom: 10px;
-  &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-    /* first in x then y and  and opacity */
-  }
-
-  &:active {
-    transform: translateY(-1px);
-    /* The properties below are relative to the initial .btn state, not the hover state */
-    background-color: $secondary-color;
-    color: rgba(3, 54, 63, 0.451);
-  }
 }
-
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  /* first in x then y and  and opacity */
+}
+.btn:active {
+  transform: translateY(-1px);
+  /* The properties below are relative to the initial .btn state, not the hover state */
+  background-color: #fff;
+  color: rgba(3, 54, 63, 0.451);
+}
 .btn--01 {
-  color: $secondary-color;
-  border: 3px solid$secondary-color;
+  color: #fff;
+  border: 3px solid #fff;
 }
+
 .animation--1 {
   animation: fadein 1s ease-in;
-}
+}/*# sourceMappingURL=style.css.map */
