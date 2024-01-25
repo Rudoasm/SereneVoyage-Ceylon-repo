@@ -1,0 +1,37 @@
+.header {
+    /* display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; */
+    height: 95vh;
+    /* always 95% the viweport */
+    background-image: linear-gradient(
+        to bottom,
+        rgba($primary-alpha, 0.848),
+        rgba($primary-beta, 0.536)
+      ),
+      url(../images/ninearch.jpg);
+    background-size: cover;
+    /* fits the image inside of element no matter what */
+    background-position: top;
+    /* no matter what the viweport size istop wont crop (top styas the same u can also change it to bottom or center) */
+    /* background-image: ;=> no need to cretae a new bg-image property u can comma it and intro a new always  but remember the order  */
+    border-radius: 1rem;
+    /* clip-path: polygon(0 0, 100% 0%, 98% 100%, 0% 100%); */
+    /* used clippy a image clip generator */
+    position: relative;
+    /* the absolute changes according to this => origin */
+  
+    &__logo-box {
+      position: absolute;
+      top: 1rem;
+      left: 4rem;
+      // & works only with classes not elements
+  
+      /* replaceble with flex box */
+    }
+    &__logo {
+      height: 20rem;
+      // margin-left:3rem;
+      /* width automatcially will be figured out */
+    }}

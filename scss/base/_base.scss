@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* prevents borders and paddings adding to height and width of the box model of elements */
+}
+html {
+  /* font-size: 10px; => bad practise if user changes font-size from browswe nothing changes so give a percentage that gets 10 percent if user dosent change anything ()if font-size is 16px */
+  font-size: 62.5%;
+  // defines what 1 rem is so doesnt fall under typography
+  /* default is 16px but when using rem that depends on root font size it makes claculation harder.
+      1rem => 10px now not 16px. we use this to make more dynamic.reducing font size makes it all smaller handy when using media querries  */
+}
+
+body {
+  box-sizing: border-box;
+}

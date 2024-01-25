@@ -1,0 +1,55 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  /* 16px now 1.6rem */
+  /* line-height: 6rem; */
+  /* got applied to each elements  */
+  color: #777;
+  padding: 2.5rem;
+}
+//   this part inside base body is also a typo part
+
+.heading-1 {
+  color: aliceblue;
+  /* u cud have used instead */
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  /* dont chnage percentages */
+  text-align: center;
+  transform: translate(-50%, -50%);
+  /* now it is related to itsle f to correctly centered
+         = > instead of flexbox  */
+  &--main-head {
+    text-transform: uppercase;
+    font-size: 6rem;
+    font-weight: 500;
+    display: block;
+    letter-spacing: 3.5rem;
+    padding: 10px;
+    /* line-height: 25px; */
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    /* tailored timing function */
+    /* to trigger animation these are the only two things needed */
+    /* animation-delay:3s => wait for 3s then animates */
+    /* animation-iteration-count: 2;=> times animation happens */
+  }
+  &--secondary-head {
+    //& here means .heading-1
+    display: block;
+    font-style: italic;
+    font-family: "Dancing Script", cursive;
+    margin-top: -1rem;
+    letter-spacing: 0.7rem;
+    padding: 10px;
+    /* animation-name: moveInRight;
+            animation-timing-function: ease-in;
+            animation-duration: 1s; */
+    /* or use animation */
+    animation: moveInRight 1s ease-in;
+    color: rgb(243, 242, 242);
+  }
+}

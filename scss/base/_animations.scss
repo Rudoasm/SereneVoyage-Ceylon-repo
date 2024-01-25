@@ -1,0 +1,40 @@
+/* Annimations */
+@keyframes moveInLeft {
+    0% {
+      opacity: 0;
+      transform: translate(-10rem);
+      /* transform: rotate(20deg); */
+    }
+    80% {
+      transform: translate(1rem);
+      /* we use this to cretae a bounce effect go ryt and come back to center. opacity would not fit here */
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+  
+  @keyframes moveInRight {
+    0% {
+      opacity: 0;
+      transform: translate(10rem);
+    }
+    80% {
+      transform: translate(-1rem);
+      /* we use this to cretae a bounce effect go ryt and come back to center. opacity would not fit here */
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }

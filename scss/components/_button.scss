@@ -1,0 +1,32 @@
+.btn {
+  &:link,
+  &:visited {
+    padding: 10px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    /* still inline but can change width and height. would start in same line without creating new line like inline */
+    transition: all 0.2s;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    /* first in x then y and  and opacity */
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    /* The properties below are relative to the initial .btn state, not the hover state */
+    background-color: $secondary-color;
+    color: rgba(3, 54, 63, 0.451);
+  }
+  &--01 {
+    color: $secondary-color;
+    border: 3px solid$secondary-color;
+  }
+  &--animated {
+    animation: fadein 1s ease-out;
+  }
+}
