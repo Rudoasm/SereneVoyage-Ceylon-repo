@@ -1,0 +1,13 @@
+// custom grid to use for this or other projects;
+
+.row {
+  max-width: $grid-width;
+  background-color: beige;
+  margin: 0 auto;
+  // margin top 0 and left and right auto means block element centered inside block element. a trick to center blocks
+  // if enuf space then this or reduces. more fluidity here
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+    // applies to all except last child/element row
+  }
+}

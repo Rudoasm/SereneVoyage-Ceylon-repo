@@ -63,7 +63,7 @@ body {
   /* line-height: 6rem; */
   /* got applied to each elements  */
   color: #777;
-  padding: 2.5rem;
+  padding: 1rem;
 }
 
 .heading-1 {
@@ -166,4 +166,13 @@ body {
 .header__logo {
   height: 20rem;
   /* width automatcially will be figured out */
+}
+
+.row {
+  max-width: 114rem;
+  background-color: beige;
+  margin: 0 auto;
+}
+.row:not(:last-child) {
+  margin-bottom: 8rem;
 }/*# sourceMappingURL=main.css.map */
