@@ -72,12 +72,12 @@ body {
   }
 }
 .heading-tert {
-  font-size: 1.6rem;
+  font-size: $default-fontsize;
   text-transform: uppercase;
   font-weight: 700;
 }
 .para {
-  font-size: 1.6rem;
+  font-size: $default-fontsize;
   line-height: 2.4rem;
   &:not(:last-child) {
     margin-bottom: 3rem;

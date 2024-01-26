@@ -165,6 +165,7 @@ body {
   transition: all 0.2s;
   border-radius: 10px;
   margin-bottom: 10px;
+  font-size: 1.6rem;
 }
 .btn:hover {
   transform: translateY(-3px);
@@ -183,6 +184,27 @@ body {
 }
 .btn--animated {
   animation: fadein 1s ease-out;
+}
+
+.btn-text:link, .btn-text:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: rgb(21, 206, 141);
+  display: inline-block;
+  border: 1px solid rgb(21, 206, 141);
+  border-radius: 4px;
+  padding: 3px;
+  transition: all 0.2s;
+}
+.btn-text:hover {
+  background-color: rgb(21, 206, 141);
+  color: #fff;
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+}
+.btn-text:active {
+  background-color: rgb(16, 162, 210);
+  color: #fff;
 }
 
 .header {

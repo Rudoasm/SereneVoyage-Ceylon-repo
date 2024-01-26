@@ -9,6 +9,7 @@
     transition: all 0.2s;
     border-radius: 10px;
     margin-bottom: 10px;
+    font-size: $default-fontsize;
   }
   &:hover {
     transform: translateY(-3px);
@@ -24,9 +25,34 @@
   }
   &--01 {
     color: $secondary-color;
-    border: 3px solid$secondary-color;
+    border: 3px solid $secondary-color;
   }
+
   &--animated {
     animation: fadein 1s ease-out;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    font-size: $default-fontsize;
+    color: $primary-alpha;
+    display: inline-block; // so that u cud use box moel props padding and margin
+    border: 1px solid $primary-alpha;
+    border-radius: 4px;
+    padding: 3px;
+    transition: all 0.2s;
+  }
+  &:hover {
+    background-color: $primary-alpha;
+    color: $secondary-color;
+    box-shadow: 0 1rem 4rem rgba(black, 0.2);
+    transform: translateY(-4px);
+  }
+  &:active {
+    background-color: $primary-beta;
+    color: $secondary-color;
   }
 }
