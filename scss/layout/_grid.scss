@@ -2,7 +2,7 @@
 
 .row {
   max-width: $grid-width;
-  background-color: beige;
+  // background-color: beige;
   margin: 0 auto;
   // margin top 0 and left and right auto means block element centered inside block element. a trick to center blocks
   // if enuf space then this or reduces. more fluidity here
@@ -18,7 +18,7 @@
     // select all elements that starts with col-
     // [class*=""] selects all that contains ""
     // [class$=""] selects all that ends with ""
-    background-color: orange;
+    // background-color: orange;
     float: left;
     &:not(:last-child) {
       margin-right: $gutter-horizontal;

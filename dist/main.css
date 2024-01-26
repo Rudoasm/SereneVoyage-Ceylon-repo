@@ -109,6 +109,53 @@ body {
   color: rgb(243, 242, 242);
 }
 
+.heading-sec {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, rgb(21, 206, 141), rgb(16, 162, 210));
+  display: inline-block;
+  -webkit-background-clip: text;
+  letter-spacing: 2px;
+  color: transparent;
+  transition: all 0.2s;
+}
+.heading-sec:hover {
+  transform: skewX(5deg) skewY(2deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 2rem rgba(48, 54, 56, 0.2);
+}
+
+.heading-tert {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.para {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+.para:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.utility-class-centerText {
+  text-align: center;
+}
+
+.ut-margin-bottom-big {
+  margin-top: -13rem;
+  margin-bottom: 8rem;
+}
+
+.ut-margin-bottom-small {
+  margin-bottom: 1.5rem;
+}
+
+.ut-margin-bottom-medium {
+  margin-bottom: 4rem;
+}
+
 .btn:link, .btn:visited {
   padding: 10px 30px;
   text-transform: uppercase;
@@ -170,7 +217,6 @@ body {
 
 .row {
   max-width: 114rem;
-  background-color: beige;
   margin: 0 auto;
 }
 .row:not(:last-child) {
@@ -182,7 +228,6 @@ body {
   clear: both;
 }
 .row [class^=col-] {
-  background-color: orange;
   float: left;
 }
 .row [class^=col-]:not(:last-child) {
@@ -205,4 +250,9 @@ body {
 }
 .row .col-3-of-4 {
   width: calc(3 * (100% - 3 * 5rem) / 4 + 2 * 5rem);
+}
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem;
 }/*# sourceMappingURL=main.css.map */

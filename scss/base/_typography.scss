@@ -53,3 +53,33 @@ body {
     color: rgb(243, 242, 242);
   }
 }
+
+.heading-sec {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, $primary-alpha, $primary-beta);
+  display: inline-block;
+  // to make the grado=ient limit to text space only
+  -webkit-background-clip: text;
+  letter-spacing: 2px;
+  // clips the background to text and then make the text transparent
+  color: transparent;
+  transition: all 0.2s;
+  &:hover {
+    transform: skewX(5deg) skewY(2deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(rgb(48, 54, 56), 0.2);
+  }
+}
+.heading-tert {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.para {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
