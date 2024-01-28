@@ -1,11 +1,16 @@
 .composition {
   position: relative;
+
   &__photo {
-    width: 55%;
+    width: 75%;
     box-shadow: 0 1.5rem 4rem rgba(black, 0.4);
     position: absolute;
     border-radius: 3rem;
     // relative to composition parent all stacked in one point
+    transition: all 0.3s;
+    z-index: 10;
+    // to make it at top stacked
+    outline-offset: 2rem;
 
     &--p1 {
       left: 0;
@@ -13,11 +18,24 @@
     }
     &--p2 {
       right: 0;
-      top: 2rem;
-    }
-    &--p3 {
-      left: 20%;
       top: 10rem;
     }
+    &--p3 {
+      left: 50%;
+      top: 22rem;
+    }
+    &:hover {
+      outline: 1.5rem solid $primary-beta;
+      // same as  border but u can play with offsets here
+      transform: scale(1.2) translateY(-1rem);
+      box-shadow: 0 1.5rem 4rem rgba(black, 0.5);
+      z-index: 20;
+      //   to overlay the images
+    }
+  }
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.95);
+    // .composition:hover .composition__photo:not(:hover)
+    // when hovering pics out of pics not hovered to be scaled down
   }
 }
