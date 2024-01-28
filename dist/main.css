@@ -139,6 +139,10 @@ body {
   margin-bottom: 3rem;
 }
 
+[class^=fa] {
+  font-size: 3rem;
+}
+
 .utility-class-centerText {
   text-align: center;
 }
