@@ -1,0 +1,41 @@
+.section-features {
+    margin-top: -15rem;
+  background-image: linear-gradient(
+      to bottom,
+      rgba($primary-alpha, 0.848),
+      rgba($primary-beta, 0.536)
+    ),
+    url(../images/srilanka-2792097_640.jpg);
+  background-size: cover;
+  margin-top: 3rem;
+ background-size: cover;
+ height: 95vh;
+ transform: skewY(-7deg);
+ &>*{
+    transform: skewY(7deg);
+ }
+
+  .container {
+    display: inline-block;
+    margin-top: 12rem;
+    text-align: center;
+    background-color: $secondary-color;
+    border-radius: 6px;
+    padding: 2px 5px;
+    transition: transform 0.2s;
+    &:hover {
+      transform: translateY(-1rem) scale(1.03);
+    }
+    .fa {
+      background-image: linear-gradient(
+        to right,
+        $primary-alpha,
+        $primary-beta
+      );
+      display: inline-block;
+      // to make the grado=ient limit to text space only
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+  }
+}

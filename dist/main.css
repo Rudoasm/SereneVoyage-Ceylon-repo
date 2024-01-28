@@ -245,6 +245,37 @@ body {
   transform: scale(0.95);
 }
 
+.section-features {
+  margin-top: -15rem;
+  background-image: linear-gradient(to bottom, rgba(21, 206, 141, 0.848), rgba(16, 162, 210, 0.536)), url(../images/srilanka-2792097_640.jpg);
+  background-size: cover;
+  margin-top: 3rem;
+  background-size: cover;
+  height: 95vh;
+  transform: skewY(-7deg);
+}
+.section-features > * {
+  transform: skewY(7deg);
+}
+.section-features .container {
+  display: inline-block;
+  margin-top: 12rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 2px 5px;
+  transition: transform 0.2s;
+}
+.section-features .container:hover {
+  transform: translateY(-1rem) scale(1.03);
+}
+.section-features .container .fa {
+  background-image: linear-gradient(to right, rgb(21, 206, 141), rgb(16, 162, 210));
+  display: inline-block;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 .header {
   /* display: flex;
     flex-direction: column;
