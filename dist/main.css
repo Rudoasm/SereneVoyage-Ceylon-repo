@@ -53,6 +53,8 @@ html {
 
 body {
   box-sizing: border-box;
+  background-color: #f7f7f7;
+  padding: 0 2rem;
 }
 
 body {
@@ -259,12 +261,14 @@ body {
 }
 .section-features .container {
   display: inline-block;
-  margin-top: 12rem;
+  margin-top: 13rem;
   text-align: center;
   background-color: #fff;
   border-radius: 6px;
-  padding: 2px 5px;
+  padding: 2rem 3rem;
+  text-align: center;
   transition: transform 0.2s;
+  line-height: 2rem;
 }
 .section-features .container:hover {
   transform: translateY(-1rem) scale(1.03);
@@ -344,6 +348,5 @@ body {
 }
 
 .section-about {
-  background-color: #f7f7f7;
   padding: 25rem;
 }/*# sourceMappingURL=main.css.map */

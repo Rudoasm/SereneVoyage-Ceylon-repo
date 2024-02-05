@@ -12,17 +12,20 @@
  height: 95vh;
  transform: skewY(-7deg);
  &>*{
+    // select all direct children
     transform: skewY(7deg);
  }
 
   .container {
     display: inline-block;
-    margin-top: 12rem;
+    margin-top: 13rem;
     text-align: center;
     background-color: $secondary-color;
     border-radius: 6px;
-    padding: 2px 5px;
+    padding: 2rem 3rem;
+    text-align: center;
     transition: transform 0.2s;
+    line-height: 2rem;
     &:hover {
       transform: translateY(-1rem) scale(1.03);
     }
